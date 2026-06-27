@@ -1,0 +1,23 @@
+Command executed:
+npm run test:allure
+
+Result:
+Features: 3
+Scenarios: 5 passed
+Steps: 28 passed
+
+Automated coverage:
+1 positive E2E signup/login/account amount scenario
+4 negative validation scenarios
+
+Console amount printed:
+Displayed amount after login for u7648e71b:
+Account 13899 | Balance: $515.50 | Available Amount: $515.50
+
+Proof screenshot:
+proof-of-execution/account-overview-proof.png
+
+Reports:
+reports/cucumber-report.html
+reports/cucumber-report.json
+allure-report/index.html

@@ -1,0 +1,13 @@
+node_modules/
+allure-report/
+allure-results/
+.env
+playwright-report/
+test-results/
+reports/videos/
+npm-debug.log*
+.DS_Store
+reports/
+config/
+COMMIT_PLAN.md
+test-data.ts

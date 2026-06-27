@@ -1,0 +1,39 @@
+{
+  "name": "parabank-playwright-bdd-pom",
+  "version": "1.0.0",
+  "description": "BDD + Page Object Model automation for ParaBank sign-up, login, and account amount validation using Playwright and Cucumber.",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "node scripts/clean-reports.js",
+    "test": "cucumber-js --config cucumber.js",
+    "test:clean": "npm run clean:reports && npm test",
+    "test:headed": "cross-env HEADLESS=false cucumber-js --config cucumber.js",
+    "test:debug": "cross-env PWDEBUG=1 HEADLESS=false cucumber-js --config cucumber.js",
+    "test:allure": "npm run clean:reports && npm test && npm run allure:generate",
+    "allure:generate": "allure generate ./allure-results -o ./allure-report --clean",
+    "allure:open": "allure open ./allure-report",
+    "install:browsers": "playwright install chromium",
+    "lint:types": "tsc --noEmit"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "pom",
+    "parabank",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^22.10.5",
+    "allure-commandline": "^2.43.0",
+    "allure-cucumberjs": "^3.10.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

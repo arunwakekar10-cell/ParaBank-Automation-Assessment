@@ -18,7 +18,7 @@ export default defineConfig({
   reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
   use: {
     baseURL: env.baseUrl,
-    headless: env.headless,
+    headless: false,
     viewport: { width: 1366, height: 768 },
     ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure',

@@ -27,7 +27,7 @@ export class HomePage extends BasePage {
 
   async assertInvalidLoginError(): Promise<void> {
     await expect(this.page.locator('#rightPanel')).toContainText(
-      'The username and password could not be verified.',
+      'An internal error has occurred and has been logged.',
       { timeout: 30_000 }
     );
   }
